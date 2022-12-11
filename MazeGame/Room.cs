@@ -1,37 +1,24 @@
-﻿using MazeGame.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MazeGame.Abstractions;
 
 namespace MazeGame
 {
-    public class Room : MapSite
+    public abstract class Room
     {
-        public Room(int roomNo)
-        {
-            _roomNumber = roomNo;
-            _sides = new MapSite[4];
-        }
-
-        public MapSite GetSide(Direction direction)
-        {
-            return _sides[(int)direction];
-        }
-
-        public void SetSide(Direction direction, MapSite mapSite)
-        {
-            _sides[(int)direction] = mapSite;
-        }
-
-        public override void Enter()
-        {
-            // Implementation of Enter method
-        }
-
         public readonly int _roomNumber;
-        private readonly MapSite[] _sides;
-    }
+        protected readonly IMapSite[] _sides;
 
+        public Room(int roomNumber)
+        {
+            _roomNumber = roomNumber;
+            _sides = new IMapSite[4];
+        }
+
+        public abstract IMapSite GetSide(Direction direction);
+        public abstract void SetSide(Direction direction, IMapSite mapSite);
+    }
 }

@@ -3,27 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MazeGame.Abstractions;
 
 namespace MazeGame
 {
-    public class MazeGame
+    internal class NormalMazeFactory : IMazeFactory
     {
-        // Method to create a Maze
-        public static Maze CreateMaze()
+        public Maze CreateMaze()
         {
-            // Create a new Maze object
-            var aMaze = new Maze();
+            Maze normalMaze = new NormalMaze();
 
-            // Create two Room objects
-            var r1 = new Room(1);
-            var r2 = new Room(2);
+            // Create two NormalRoom objects
+            var r1 = new NormalRoom(1);
+            var r2 = new NormalRoom(2);
 
             // Create a Door that connects the two rooms
             var theDoor = new Door(r1, r2);
 
             // Add the rooms to the Maze
-            aMaze.AddRoom(r1);
-            aMaze.AddRoom(r2);
+            normalMaze.AddRoom(r1);
+            normalMaze.AddRoom(r2);
 
             // Set the walls and door for room 1
             r1.SetSide(Direction.North, new Wall());
@@ -36,10 +35,7 @@ namespace MazeGame
             r2.SetSide(Direction.East, new Wall());
             r2.SetSide(Direction.South, new Wall());
             r2.SetSide(Direction.West, theDoor);
-
-            // Return the Maze
-            return aMaze;
+            return normalMaze;
         }
     }
-
 }

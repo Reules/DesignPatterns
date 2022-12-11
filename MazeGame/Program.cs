@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace MazeGame
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IMazeFactory factory = new NormalMazeFactory();
+            Maze maze = factory.CreateMaze();
+        }
+    }
+}

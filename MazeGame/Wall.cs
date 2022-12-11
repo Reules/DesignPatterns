@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MazeGame
 {
-    public class Wall : MapSite
+    public class Wall : IMapSite
     {
         // Default constructor
         public Wall()
@@ -15,7 +15,7 @@ namespace MazeGame
         }
 
         // Overridden Enter method
-        public override void Enter()
+        public void Enter()
         {
             // Implementation of Enter method
         }

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MazeGame.Abstractions;
 
-namespace MazeGame.Abstractions
+namespace MazeGame
 {
-    public abstract class MapSite
+    internal interface IMazeFactory
     {
-        public abstract void Enter();
+        Maze CreateMaze();
     }
 }

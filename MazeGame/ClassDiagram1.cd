@@ -1,18 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MazeGame.Abstractions.MapSite" Collapsed="true">
-    <Position X="9.75" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Abstractions\MapSite.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="MazeGame.Door" Collapsed="true">
     <Position X="7.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAEAgAAAAAAAgAAAAA=</HashCode>
       <FileName>Door.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="MazeGame.Maze">
     <Position X="14.5" Y="1" Width="1.5" />
@@ -20,9 +14,6 @@
       <HashCode>AAAAAAABAAAAAACAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Maze.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="_rooms" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="MazeGame.MazeGame">
     <Position X="14.5" Y="4.25" Width="1.5" />
@@ -31,12 +22,13 @@
       <FileName>MazeGame.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="MazeGame.Room" Collapsed="true">
+  <Class Name="MazeGame.NormalRoom" Collapsed="true">
     <Position X="12" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAIQAAAAAAEAAAACAAAAAAAAAA=</HashCode>
-      <FileName>Room.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAACAAAAIAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NormalRoom.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="MazeGame.Wall" Collapsed="true">
     <Position X="9.75" Y="2.25" Width="1.5" />
@@ -44,6 +36,7 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Wall.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Enum Name="MazeGame.Direction" Collapsed="true">
     <Position X="14.5" Y="3" Width="1.5" />
